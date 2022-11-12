@@ -16,10 +16,7 @@ use App\Http\Jambasangsang\Traits\updatableAndCreatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-    use updatableAndCreatable
-    // , HasRoles
-    ;
+    use HasApiTokens, HasFactory, Notifiable, updatableAndCreatable, HasRoles;
 
     /**
      * The attributes that are mass assignable.

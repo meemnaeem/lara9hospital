@@ -3,7 +3,7 @@
     <!-- Logo -->
     <div class="header-left">
         <a href="index.html" class="logo">
-            <img src="{{ asset('jambasangsang/assets/img/logo.jpg') }}" width="40" height="40" alt="">
+            <img src="{{ asset('assets/img/logo.jpg') }}" width="40" height="40" alt="">
         </a>
     </div>
     <!-- /Logo -->
@@ -134,8 +134,8 @@
                                     </span>
                                     <div class="media-body">
                                         <p class="noti-details"><span class="noti-title">Rolland
-                                                Webber</span> completed task <span
-                                                class="noti-title">Patient and Doctor video
+                                                Webber</span> completed task <span class="noti-title">Patient and
+                                                Doctor video
                                                 conferencing</span></p>
                                         <p class="noti-time"><span class="notification-time">12 mins
                                                 ago</span></p>
@@ -151,8 +151,8 @@
                                     </span>
                                     <div class="media-body">
                                         <p class="noti-details"><span class="noti-title">Bernardo
-                                                Galaviz</span> added new task <span
-                                                class="noti-title">Private chat module</span></p>
+                                                Galaviz</span> added new task <span class="noti-title">Private chat
+                                                module</span></p>
                                         <p class="noti-time"><span class="notification-time">2 days
                                                 ago</span></p>
                                     </div>

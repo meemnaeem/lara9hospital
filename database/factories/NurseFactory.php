@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Specialist;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,10 @@ class NurseFactory extends Factory
     public function definition()
     {
         return [
-            //
+                'about_nurse' => $this->faker->text,
+                'experience' => $this->faker->text,
+                'user_id' => User::all()->random()->id,
+                'specialist_id' => Specialist::all()->random()->id,
         ];
     }
 }

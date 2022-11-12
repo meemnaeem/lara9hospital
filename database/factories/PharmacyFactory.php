@@ -17,7 +17,14 @@ class PharmacyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'code' => $this->faker->numberBetween(0, 1000),
+            'name' => $this->faker->name,
+            'email' => $this->faker->email(),
+            'phone' => $this->faker->phoneNumber,
+            'address' => $this->faker->address,
+            'status' => $this->faker->randomElement([1,0]),
+            'branch_id' => $this->faker->numberBetween(0, 1000),
+
         ];
     }
 }

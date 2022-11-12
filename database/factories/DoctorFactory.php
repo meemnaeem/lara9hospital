@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use App\Models\Specialist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,11 @@ class DoctorFactory extends Factory
     public function definition()
     {
         return [
-            //
+        'about_doctor' => $this->faker->text,
+        'charge' => $this->faker->numberBetween(0, 1000),
+        'experience' => $this->faker->text,
+        'user_id' => User::all()->random()->id,
+        'specialist_id' => Specialist::all()->random()->id,
         ];
     }
 }
