@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
-
+    <x-flatpickr::style />
 
 </head>
 
@@ -118,6 +118,8 @@
     @flashScript
     @flashRender
 
+    <x-flatpickr::script />
+
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             window.livewire.on('urlChange', (url) => {
@@ -126,6 +128,15 @@
                 $('.breadcrumb-item.active').text(url.substring(0, 1).toUpperCase().replace('-', ' ') + url
                     .substring(1).replace('-', ' '))
             });
+        });
+
+
+        window.addEventListener('openModal', function(e) {
+            $("#deleteModal").modal('show')
+        });
+
+        window.addEventListener('hideModal', function(e) {
+            $("#deleteModal").modal('hide');
         });
     </script>
 

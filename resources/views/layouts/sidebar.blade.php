@@ -13,7 +13,7 @@
                     <a href="{{ route('users.index') }}"><i class="la la-users"></i> <span>HR Management</span></a>
                 </li>
                 <li>
-                    <a href="clients.html"><i class="la la-users"></i> <span>Accounting Management</span></a>
+                    <a href="{{ route('messages') }}"><i class="la la-users"></i> <span>Messages</span></a>
                 </li>
                 <li>
                     <a href="clients.html"><i class="la la-users"></i> <span>Appointments</span></a>
@@ -42,6 +42,9 @@
 
                 <li>
                     <a href="clients.html"><i class="la la-users"></i> <span>Inventory Management</span></a>
+                </li>
+                <li>
+                    <a href="clients.html"><i class="la la-users"></i> <span>Accounting Management</span></a>
                 </li>
                 <li>
                     <a href="assets.html"><i class="la la-object-ungroup"></i> <span>Assets</span></a>

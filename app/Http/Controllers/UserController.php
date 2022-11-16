@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Jambasangsang\Service\UserService;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Jambasangsang\Flash\Facades\LaravelFlash;
 use Spatie\Permission\Models\Permission;
+use App\Jambasangsang\Service\UserService;
+use Jambasangsang\Flash\Facades\LaravelFlash;
 
 class UserController extends Controller
 {
@@ -59,9 +60,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user, UserService $userService)
     {
-        //
+        $userService->editUserData($user);
+        return view('backend.admins.users.edit', compact('user'));
     }
 
     /**

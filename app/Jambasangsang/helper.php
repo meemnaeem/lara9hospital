@@ -48,8 +48,8 @@ class Helper
      {
          return [
              '' => 'Select',
-             '1' => 'Male',
              '0' => 'Female',
+             '1' => 'Male',
          ];
      }
 
@@ -64,9 +64,26 @@ class Helper
          ];
      }
 
+     public static function getTitle()
+     {
+         return [
+             '' => 'Select',
+             '1' => 'Mr',
+             '2' => 'Mrs',
+             '3' => 'Ms',
+             '4' => 'Dr',
+             '5' => 'Prof',
+         ];
+     }
+
+     public static function Selected($value1, $value2)
+     {
+         return $value1 == $value2 ? 'selected': '';
+     }
+
      public static function getRoles()
      {
-         return Role::orderBy('id', 'asc')->where('name', '!=', 'patient')->get(['id', 'name']);
+         return Role::orderBy('id', 'asc')->where('name', '!=', "patient")->get(['id', 'name']);
      }
 
      public static function getPerPageNumber()

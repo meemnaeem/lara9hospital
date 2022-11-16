@@ -2,4 +2,7 @@
 
 ---
 
-Part 8 completed
+Completed:
+
+User management
+User conversation

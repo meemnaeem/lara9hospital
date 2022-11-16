@@ -31,11 +31,12 @@ Route::middleware('auth')->group(function () {
         Route::get('users/create', [UserController::class, 'create'])->name('users.create');
         Route::post('users/store', [UserController::class, 'store'])->name('users.store');
         Route::get('users/edit/{user}', [UserController::class, 'edit'])->name('users.edit');
-        Route::delete('users/delete/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+        Route::post('users/delete/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
         foreach (Helper::getRoles() as $key => $role) {
             Route::view(Str::lower($role->name) ?? 'users', 'backend.admins.users.index')
             ->name('users.' .Str::lower($role->name) ?? 'index');
         }
     });
+    Route::view('messages', 'backend.admins.users.messages')->name('messages');
 });
